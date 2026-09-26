@@ -1,0 +1,23 @@
+{
+  "name": "apartment-management-server",
+  "version": "1.0.0",
+  "description": "Apartment Management System API",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "check": "node --check src/app.js && node --check src/config/env.js && node --check src/routes/health.routes.js && node --check src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

@@ -7,15 +7,23 @@
   "scripts": {
     "dev": "nodemon src/server.js",
     "start": "node src/server.js",
-    "check": "node --check src/app.js && node --check src/config/env.js && node --check src/routes/health.routes.js && node --check src/server.js"
+    "check": "node --check src/app.js && node --check src/server.js && node --check src/scripts/seed-admin.js && node --check src/controllers/auth.controller.js && node --check src/controllers/property.controller.js && node --check src/controllers/unit.controller.js && node --check src/controllers/rent.controller.js && node --check src/controllers/maintenance.controller.js && node --check src/controllers/notice.controller.js && node --check src/controllers/admin.controller.js && node --check src/controllers/dashboard.controller.js && node --check src/controllers/report.controller.js",
+    "seed:admin": "node src/scripts/seed-admin.js"
   },
   "keywords": [],
   "author": "",
   "license": "UNLICENSED",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
     "dotenv": "^18.0.4",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.10.2",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
